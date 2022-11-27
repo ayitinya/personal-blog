@@ -3,11 +3,11 @@
         <ContentDoc>
             <template v-slot="{ doc }">
                 <img v-if="doc.image" :src="doc.image" :alt="doc.alt" class="w-full pb-10" />
-                <div class="mx-auto prose prose-stone md:prose-lg lg:prose-xl dark:prose-invert">
+                <article class="mx-auto prose prose-stone md:prose-lg lg:prose-xl dark:prose-invert">
                     <span>{{doc.date}}</span>
                     <h1>{{ doc.title }}</h1>
                     <ContentRenderer :value="doc" />
-                </div>
+                </article>
             </template>
             <template #empty>
                 <h1>Document is empty</h1>

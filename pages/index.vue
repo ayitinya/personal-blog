@@ -5,9 +5,8 @@
     <div class="px-5 md:px-10 lg:px-24 ">
 
         <section class="flex gap-2 py-10">
-            <div class="grow-0 md:shrink-0 md:basis-2/3">
+            <div class="grow-0 md:shrink-0 md:basis-2/3 prose dark:prose-invert max-w-none">
                 <h1 class="text-4xl font-bold">Hello, I'm Ayitinya</h1>
-                <br>
                 <p class="text-xl font-light">
                     I'm a software engineer and a web developer. I love to build things that are useful and solve
                     problems.

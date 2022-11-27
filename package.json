@@ -15,7 +15,8 @@
     "nuxt": "3.0.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
-    "sitemap": "^7.1.1"
+    "sitemap": "^7.1.1",
+    "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {}
 }

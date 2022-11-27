@@ -1,9 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div>
+    <div class="min-h-screen flex flex-col">
         <Navbar />
-        <slot></slot>
+        <main>
+            <slot></slot>
+        </main>
+
+        <Footer class="mt-auto px-5 py-2 border-t dark:border-slate-800 md:px-10 lg:px-24" />
     </div>
 </template>
 

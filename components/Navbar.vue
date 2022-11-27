@@ -11,7 +11,7 @@
                     <NuxtLink to="/">Home</NuxtLink>
                 </li>
                 <li class="px-3">
-                    <NuxtLink to="/">articles</NuxtLink>
+                    <NuxtLink to="/articles/">articles</NuxtLink>
                 </li>
                 <li class="px-3">
                     <NuxtLink to="https://ayitinya.me" :external="true">about</NuxtLink>

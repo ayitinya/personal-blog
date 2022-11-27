@@ -2,8 +2,8 @@
 
 <template>
     <div class="min-h-screen flex flex-col">
-        <Navbar />
-        <main>
+        <Navbar class="px-5 md:px-10 lg:px-24" />
+        <main class="px-5 py-10 md:px-10 lg:px-24">
             <slot></slot>
         </main>
 
@@ -11,4 +11,6 @@
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>

@@ -2,7 +2,7 @@
 
 <template>
     <header>
-        <nav class="flex-row justify-between flex px-5 md:px-10 lg:px-24 py-2">
+        <nav class="flex-row justify-between flex py-2">
             <NuxtLink to="https://ayitinya.me" :external="true">
                 <img src="~/assets/images/logo.png" class="h-12 dark:invert" alt="logo" />
             </NuxtLink>

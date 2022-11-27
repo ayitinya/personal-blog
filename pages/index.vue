@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="px-5 md:px-10 lg:px-24 ">
+    <div class="">
 
         <section class="flex gap-2 py-10">
             <div class="grow-0 md:shrink-0 md:basis-2/3 prose dark:prose-invert max-w-none">

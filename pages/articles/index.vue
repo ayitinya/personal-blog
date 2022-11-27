@@ -1,20 +1,20 @@
 <template>
-    <main class="px-5 py-10 md:px-10 lg:px-24 flex flex-col items-center">
+    <div class="flex flex-col items-center">
         <div class="prose dark:prose-invert ">
             <h1 class="text-center ">Articles</h1>
             <p class="text-center">All my articles</p>
         </div>
         <br>
-            <div class="mx-auto py-10">
-                <ContentList>
-                    <template v-slot="{ list }">
-                        <ArticleCard v-for="article in list" :key="article.id" :title="article.title"
-                            :description="article.description" :url="article._path" :date="article.date" />
-                    </template>
-                    <template #not-found>
-                        <p>No articles found.</p>
-                    </template>
-                </ContentList>
-            </div>
-    </main>
+        <div class="mx-auto py-10">
+            <ContentList>
+                <template v-slot="{ list }">
+                    <ArticleCard v-for="article in list" :key="article.id" :title="article.title"
+                        :description="article.description" :url="article._path" :date="article.date" />
+                </template>
+                <template #not-found>
+                    <p>No articles found.</p>
+                </template>
+            </ContentList>
+        </div>
+    </div>
 </template>

@@ -6,4 +6,11 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
     },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
 }

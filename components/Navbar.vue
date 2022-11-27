@@ -11,10 +11,10 @@
                     <NuxtLink to="/">Home</NuxtLink>
                 </li>
                 <li class="px-3">
-                    <NuxtLink to="/articles/">articles</NuxtLink>
+                    <NuxtLink to="/articles/">Articles</NuxtLink>
                 </li>
                 <li class="px-3">
-                    <NuxtLink to="https://ayitinya.me" :external="true">about</NuxtLink>
+                    <NuxtLink to="https://ayitinya.me" :external="true">About</NuxtLink>
                 </li>
             </ul>
         </nav>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const {data: articles} = await useFetch('/api/articles')
 </script>
 
 <template>
@@ -28,10 +27,16 @@ const {data: articles} = await useFetch('/api/articles')
             <h2 class="text-2xl font-bold">Articles</h2>
             <br>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                <template v-if="articles">
-                    <BlogCard v-for="article in articles" :key="article.id" :title="article.title"
-                        :description="article.description" :image="article.image" :url="`/articles/${article.id}`" :alt="article.alt" :date="article.date" />
-                </template>
+                <ContentList>
+                    <template v-slot="{ list }">
+                        <BlogCard v-for="article in list" :key="article.id" :title="article.title"
+                            :description="article.description" :image="article.image" :url="article._path"
+                            :alt="article.alt" :date="article.date" />
+                    </template>
+                    <template #not-found>
+                        <p>No articles found.</p>
+                    </template>
+                </ContentList>
             </div>
         </section>
     </div>

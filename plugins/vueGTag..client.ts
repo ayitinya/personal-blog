@@ -5,5 +5,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     property: {
       id: 'G-P0QPNB7PEG'
     }
-  })
+  },
+    nuxtApp.$router)
 })

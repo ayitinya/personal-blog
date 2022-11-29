@@ -1,11 +1,4 @@
 {
-    "eslint.format.enable": true,
-    "eslint.packageManager": "yarn",
-    "eslint.run": "onSave",
-    "eslint.alwaysShowStatus": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-    },
     "files.associations": {
         "*.css": "tailwindcss"
     },

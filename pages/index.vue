@@ -26,7 +26,7 @@
             <h2 class="text-2xl font-bold">Recent Articles</h2>
             <br>
             <div class="">
-                <ContentList>
+                <ContentList :query="{ path: '/articles', sort: { title: -1 }, limit: 3 }">
                     <template v-slot="{ list }">
                         <ArticleCard v-for="article in list" :key="article.id" :title="article.title"
                             :description="article.description" :url="article._path" :date="article.date" />

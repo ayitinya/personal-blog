@@ -6,7 +6,7 @@
         </div>
         <br>
         <div class="mx-auto py-10">
-            <ContentList :query="{ path: '/articles', sort: { title: -1 } }">
+            <ContentList :query="{ path: '/articles', sort: { id: -1 } }">
                 <template v-slot="{ list }">
                     <ArticleCard v-for="article in list" :key="article.id" :title="article.title"
                         :description="article.description" :url="article._path" :date="article.date" />

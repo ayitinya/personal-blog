@@ -6,6 +6,11 @@ export default defineNuxtPlugin((nuxtApp) => {
     {
       property: {
         id: "G-P0QPNB7PEG",
+        params: {
+          linker: {
+              domains: ['ayitinya.me', 'blog.ayitinya.me'],
+          }
+      }
       },
     },
     nuxtApp.$router

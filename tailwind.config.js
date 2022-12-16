@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [],
   theme: {
@@ -6,15 +9,15 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            a: {
+            'h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a': {
               'text-decoration': 'none',
-              'transition': 'all 200ms ease-in-out',
-              '&:hover': {
-                'text-decoration': 'underline',
-              }
             }
           }
         }
+      },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        serif: ["Spectral", ...defaultTheme.fontFamily.serif]
       }
     },
   },

@@ -16,5 +16,10 @@ export default defineNuxtConfig({
       'ENV': process.env.VERCEL_ENV || process.env.NODE_ENV || 'development',
       'G_TAG_ID': process.env.G_TAG_ID,
     }
+  },
+  nitro: {
+    prerender: {
+      routes: ['/articles/', '/']
+    }
   }
 });

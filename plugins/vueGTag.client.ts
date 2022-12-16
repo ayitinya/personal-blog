@@ -1,13 +1,11 @@
 import VueGtag from "vue-gtag-next";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const config = useRuntimeConfig()
+  const config = useRuntimeConfig();
 
-  if (config.public.ENV !== 'production') {
+  if (config.public.ENV !== "production") {
     return;
   }
-
-  console.log('G_TAG_ID', config.public.G_TAG_ID);
 
   nuxtApp.vueApp.use(
     VueGtag,
@@ -16,9 +14,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         id: config.public.G_TAG_ID,
         params: {
           linker: {
-              domains: ['ayitinya.me', 'blog.ayitinya.me'],
-          }
-      }
+            domains: ["ayitinya.me", "blog.ayitinya.me"],
+          },
+        },
       },
     },
     nuxtApp.$router

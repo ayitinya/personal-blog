@@ -1,6 +1,18 @@
 <script setup lang="ts">
 const progressIndicator = ref<HTMLElement | null>(null)
 
+useHead(
+    {
+        script: [
+            {
+                async: true,
+                crossorigin: "anonymous",
+                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8472745362570634",
+            }
+        ]
+    },
+    { mode: 'client' }
+)
 
 onMounted(() => {
     document.addEventListener('scroll', () => {

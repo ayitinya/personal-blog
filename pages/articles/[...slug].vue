@@ -23,9 +23,9 @@ onMounted(() => {
                         class="h-1 rounded-r fixed top-0 left-0 right-0 origin-left scale-x-0 bg-black dark:bg-blue-500"></div>
                 </Teleport>
             </ClientOnly>
-            <NuxtImg v-if="doc.providerUrl" provider="cloudinary" format="webp" quality="70" :src="doc.providerUrl"
+            <NuxtImg height="450" width="800" v-if="doc.providerUrl" provider="cloudinary" format="webp" quality="70" :src="doc.providerUrl"
                 class="w-full pb-10 max-h-[450px] object-cover object-center" />
-            <NuxtImg v-else-if="doc.image" :src="doc.image" :alt="doc.alt"
+            <NuxtImg v-else-if="doc.image" height="450" width="800" :src="doc.image" :alt="doc.alt"
                 class="w-full pb-10 max-h-[450px] object-cover object-center" />
             <article class="mx-auto prose prose-stone md:prose-lg lg:prose-xl dark:prose-invert">
                 <span>{{ doc.date }}</span>

@@ -1,27 +1,13 @@
 <script setup lang="ts">
 const progressIndicator = ref<HTMLElement | null>(null)
 
-useHead(
-    {
-        script: [
-            {
-                async: true,
-                crossorigin: "anonymous",
-                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8472745362570634",
-            }
-        ]
-    },
-    { mode: 'client' }
-)
-
 onMounted(() => {
     document.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY
         const pageHeight = document.body.scrollHeight - window.innerHeight
-        const progress = (scrollPosition / pageHeight) * 100
 
         if (progressIndicator.value) {
-            progressIndicator.value.style.width = `${progress}%`
+            progressIndicator.value.style.transform = `scaleX(${scrollPosition / pageHeight})`
         }
     })
 })
@@ -34,7 +20,7 @@ onMounted(() => {
             <ClientOnly>
                 <Teleport to="body">
                     <div id="progress-indicator" ref="progressIndicator"
-                        class="h-1 rounded-r fixed top-0 bg-black dark:bg-blue-500"></div>
+                        class="h-1 rounded-r fixed top-0 left-0 right-0 origin-left bg-black dark:bg-blue-500"></div>
                 </Teleport>
             </ClientOnly>
             <NuxtImg v-if="doc.providerUrl" provider="cloudinary" format="webp" quality="70" :src="doc.providerUrl"

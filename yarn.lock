@@ -6260,6 +6260,13 @@ vue-devtools-stub@^0.1.0:
   resolved "https://registry.yarnpkg.com/vue-devtools-stub/-/vue-devtools-stub-0.1.0.tgz#a65b9485edecd4273cedcb8102c739b83add2c81"
   integrity sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==
 
+vue-disqus@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-5.1.0.tgz#2f865534d24f9dd03dded6824b55ea2dbaad9dbf"
+  integrity sha512-3QInKK2K9cXCjOu0wm7FkA701qDoUX1CjLSkpHg1k5z3HicjJtWrbOJR11bKPPMwDOvDM47+LeSiSC+TOz1Hqw==
+  dependencies:
+    vue "^3.0.5"
+
 vue-gtag-next@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/vue-gtag-next/-/vue-gtag-next-1.14.0.tgz#793aef0b90dff4213b9f3a79827cd99b06e678dd"
@@ -6272,7 +6279,7 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue@^3.2.45:
+vue@^3.0.5, vue@^3.2.45:
   version "3.2.45"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.45.tgz#94a116784447eb7dbd892167784619fef379b3c8"
   integrity sha512-9Nx/Mg2b2xWlXykmCwiTUCWHbWIj53bnkizBxKai1g61f2Xit700A1ljowpTIM11e3uipOeiPcSqnmBg6gyiaA==

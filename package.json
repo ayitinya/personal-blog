@@ -20,6 +20,7 @@
     "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {
-    "@nuxtjs/robots": "^3.0.0"
+    "@nuxtjs/robots": "^3.0.0",
+    "vue-disqus": "^5.1.0"
   }
 }

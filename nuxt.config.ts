@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/robots",
     "@nuxt/image-edge",
-    "@nuxtjs/web-vitals",
   ],
   image: {
     cloudinary: {
@@ -22,9 +21,5 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/articles/", "/"],
     },
-  },
-  webVitals: {
-    ga: { id: process.env.G_TAG_ID || "" },
-    debug: true ,
   },
 });

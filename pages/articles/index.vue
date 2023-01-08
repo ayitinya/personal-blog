@@ -8,8 +8,10 @@
         <div class="mx-auto py-10">
             <ContentList :query="{ path: '/articles', sort: { id: -1 } }">
                 <template v-slot="{ list }">
-                    <ArticleCard v-for="article in list" :key="article.id" :title="article.title"
+                    <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                    <ArticleCard2 v-for="article in list" :key="article.id" :title="article.title"
                         :description="article.description" :url="article._path" :date="article.date" />
+                    </ol>
                 </template>
                 <template #not-found>
                     <p>No articles found.</p>

@@ -23,20 +23,19 @@
         </section>
 
         <section class="py-10">
-            <h2 class="text-2xl font-bold">Recent Articles</h2>
-            <br>
-            <div class="flex flex-col">
-                <ContentList :query="{ path: '/articles', sort: { id: -1 }, limit: 3 }">
-                    <template v-slot="{ list }">
-                        <ArticleCard v-for="article in list" :key="article.id" :title="article.title"
+            <h2 class="text-2xl font-bold my-4">Recent Articles</h2>
+            <ContentList :query="{ path: '/articles', sort: { id: -1 }, limit: 3 }">
+                <template v-slot="{ list }">
+                    <ol class="relative border-l border-gray-200 dark:border-gray-700">
+                        <ArticleCard2 v-for="article in list" :key="article.id" :title="article.title"
                             :description="article.description" :url="article._path" :date="article.date" />
-                    </template>
-                    <template #not-found>
-                        <p>No articles found.</p>
-                    </template>
-                </ContentList>
-                <NuxtLink to="/articles" class="text-center">View all articles</NuxtLink>
-            </div>
+                    </ol>
+                </template>
+                <template #not-found>
+                    <p>No articles found.</p>
+                </template>
+            </ContentList>
+                <NuxtLink to="/articles" class="text-center border p-2 rounded">View all articles</NuxtLink>
         </section>
     </div>
 </template>

@@ -6,4 +6,5 @@
         "strings": true
     },
     "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
+    "markdown.extension.toc.updateOnSave": false,
 }

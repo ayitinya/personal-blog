@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.css": "tailwindcss"
+		},
+		"tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
+		"markdown.extension.toc.updateOnSave": false,
+		"editor.quickSuggestions": {
+			"strings": true
+		}
+	}
+}

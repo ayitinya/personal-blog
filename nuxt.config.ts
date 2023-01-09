@@ -6,6 +6,16 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "@nuxt/image-edge",
   ],
+  content: {
+    markdown: {
+      rehypePlugins: { "rehype-highlight": { detect: true } },
+    },
+    highlight: {
+      theme: {
+        default: 'monokai'
+      },
+    },
+  },
   image: {
     cloudinary: {
       baseURL: "https://res.cloudinary.com/dnha19v3n/image/upload/",

@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const articles = await getCollection("blog");
+---
+
+<Layout title="Ayitinya's Blog - All Articles">
+  <div class="flex flex-col items-center">
+    <div class="prose dark:prose-invert">
+      <h1 class="text-center">Articles</h1>
+      <p class="text-center">All my articles</p>
+    </div>
+    <br />
+    <div class="mx-auto py-10">
+      <ol class="relative border-l border-gray-200 dark:border-gray-700">
+        {
+          articles
+            .sort((a, b) => b.data.id - a.data.id)
+            .map((article) => (
+              <Card
+                title={article.data.title}
+                description={article.data.description}
+                url={`/articles/${article.slug}`}
+                date={new Date(article.data.date).toDateString()}
+              />
+            ))
+        }
+      </ol>
+    </div>
+  </div>
+</Layout>

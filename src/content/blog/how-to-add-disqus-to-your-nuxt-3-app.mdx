@@ -1,0 +1,66 @@
+---
+title: How To Add Disqus To Your Nuxt 3 App
+description: A step-by-step guide on how to add Disqus to your Nuxt 3 app.
+date: 2022-12-29
+image: https://res.cloudinary.com/dnha19v3n/image/upload/v1672285187/personal-blog/banner-772x2503-6_kjkvfh.png
+alt: Disqus Banner
+id: 4
+draft: false
+---
+import { Image } from '@astrojs/image/components';
+
+## What is Disqus?
+
+Disqus is a free service that allows you to add comments to your website. It is a great way to engage with your readers and get feedback on your content. It is also a great way to get more traffic to your website.
+
+It is a popular service that is used by many websites for their comments section. Disqus isn't free, but it has a free plan that adds ads to your comments section. You can also pay for a premium plan that removes the ads.
+
+## Getting Started
+
+To get started, you need to create a Disqus account. You can do this by going to the [Disqus website](https://disqus.com/). Once you have created an account, you can add a new website to your account. You can do this by clicking on the "Get Started" button. Fill out the form and confirm to add your website to Disqus. This will give you a shortname that you will need to add to your Nuxt 3 app, note it carefully.
+
+<Image
+  src="https://res.cloudinary.com/dnha19v3n/image/upload/v1672284279/personal-blog/Capture_d_%C3%A9cran_2022-12-29_032148_fhxs5c.png"
+  height={800}
+  width={1000}
+  alt="Disqus website with a form to add a new website"
+ />
+
+## Adding Disqus to Your Nuxt 3 App
+
+To add Disqus, install the [Vue-Disqus](https://ktquez.github.io/vue-disqus/) package. You can do this by running the following command:
+
+```bash
+npm install -s vue-disqus@next
+# or
+yarn add vue-disqus@next
+
+```
+
+Add the following code to plugins/disqus.js:
+
+```js
+import VueDisqus from "vue-disqus";
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(VueDisqus, {
+    shortname: "shortname",
+  });
+});
+```
+
+Replace `shortname` with the shortname that you got from Disqus. You can now add the Disqus component to your app. You can do this by adding the following code to your layout:
+
+```vue
+<template>
+  <div>
+    <ClientOnly>
+      <Disqus identifier="" url="" title="" />
+    </ClientOnly>
+  </div>
+</template>
+```
+
+Replace `identifier`, `url`, and `title` with the appropriate values. You can find more information about these values in the [Disqus documentation](https://help.disqus.com/customer/en/portal/articles/2158629).
+
+`ClientOnly` is being used because the Disqus component is not compatible with SSR and will throw an error if it is rendered on the server.

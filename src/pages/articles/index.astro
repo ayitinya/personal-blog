@@ -16,14 +16,16 @@ const articles = await getCollection("blog");
     <div class="mx-auto py-10">
       <ol class="relative border-l border-gray-200 dark:border-gray-700">
         {
-          articles.map((article) => (
-            <Card
-              title={article.data.title}
-              description={article.data.description}
-              url={`/articles/${article.slug}`}
-              date={new Date(article.data.date).toLocaleDateString()}
-            />
-          ))
+          articles
+            .sort((a, b) => b.data.id - a.data.id)
+            .map((article) => (
+              <Card
+                title={article.data.title}
+                description={article.data.description}
+                url={`/articles/${article.slug}`}
+                date={new Date(article.data.date).toDateString()}
+              />
+            ))
         }
       </ol>
     </div>

@@ -29,16 +29,20 @@ const articles = await getCollection("blog");
     <h2 class="text-2xl font-bold my-4">Recent Articles</h2>
     <ol class="relative border-l border-gray-200 dark:border-gray-700">
       {
-        articles.map((article) => (
-          <Card
-            title={article.data.title}
-            description={article.data.description}
-            url={`/articles/${article.slug}`}
-            date={new Date(article.data.date).toLocaleDateString()}
-          />
-        ))
+        articles
+          .sort((a, b) => b.data.id - a.data.id)
+          .map((article) => (
+            <Card
+              title={article.data.title}
+              description={article.data.description}
+              url={`/articles/${article.slug}`}
+              date={new Date(article.data.date).toDateString()}
+            />
+          )).slice(0, 3)
       }
     </ol>
-    <!-- <NuxtLink to="/articles" class="text-center border p-2 rounded">View all articles</NuxtLink> -->
+    <a href="/articles" class="text-center border p-2 rounded"
+      >View all articles</a
+    >
   </section>
 </Layout>

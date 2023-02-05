@@ -50,7 +50,7 @@ const { Content } = await entry.render();
   <article
     class="mx-auto prose prose-stone md:prose-lg lg:prose-xl dark:prose-invert"
   >
-    <span>{entry.data.date.toLocaleDateString()}</span>
+    <span>{entry.data.date.toDateString()}</span>
     <h1>{entry.data.title}</h1>
     <Content />
     <Disqus

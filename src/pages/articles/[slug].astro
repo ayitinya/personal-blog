@@ -1,0 +1,61 @@
+---
+import { getCollection, CollectionEntry } from "astro:content";
+import { Image } from "@astrojs/image/components";
+import Layout from "../../layouts/Layout.astro";
+import Disqus from "../../components/Disqus.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => {
+    return [
+      {
+        params: { slug: entry.slug },
+        props: { entry },
+      },
+    ];
+  });
+}
+
+const entry: CollectionEntry<"blog"> = Astro.props.entry;
+const { Content } = await entry.render();
+---
+
+<script lang="ts">
+  const progressIndicator = document.getElementById("progress-indicator");
+
+  document.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const pageHeight = document.body.scrollHeight - window.innerHeight;
+    if (progressIndicator) {
+      progressIndicator.style.transform = `scaleX(${
+        scrollPosition / pageHeight
+      })`;
+    }
+  });
+</script>
+
+<Layout title={entry.data.title}>
+  <div
+    id="progress-indicator"
+    class="h-1 rounded-r fixed top-0 left-0 right-0 origin-left scale-x-0 bg-black dark:bg-blue-500"
+  >
+  </div>
+  <Image
+    src={entry.data.image}
+    alt={entry.data.title}
+    width={800}
+    height={450}
+    class="w-full pb-10 max-h-[450px] object-cover object-center"
+  />
+  <article
+    class="mx-auto prose prose-stone md:prose-lg lg:prose-xl dark:prose-invert"
+  >
+    <span>{entry.data.date.toLocaleDateString()}</span>
+    <h1>{entry.data.title}</h1>
+    <Content />
+    <Disqus
+      title={entry.data.title}
+      slug={`https://blog.ayitinya.me/articles${entry.slug}`}
+    />
+  </article>
+</Layout>

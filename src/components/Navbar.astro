@@ -1,0 +1,44 @@
+---
+import { Image } from '@astrojs/image/components';
+import LogoImg from '../images/logo.png';
+---
+
+<header>
+  <nav class="px-5 md:px-10 lg:px-24 flex-row justify-between flex py-2">
+    <a href="https://ayitinya.me">
+      <Image
+        src={LogoImg}
+        format="webp"
+        quality={80}
+        class="h-12 w-12 dark:invert"
+        alt="logo"
+      />
+    </a>
+    <ul class="flex items-center">
+      <li class="mx-2">
+        <a
+          class="hover:underline underline-offset-8 transition-all duration-500"
+          href="/"
+        >
+          Home
+      </a>
+      </li>
+      <li class="px-3">
+        <a
+          class="hover:underline underline-offset-8 transition-all duration-500"
+          href="/articles/"
+        >
+          Articles
+      </a>
+      </li>
+      <li class="px-3">
+        <a
+          class="hover:underline underline-offset-8 transition-all duration-500"
+          href="https://ayitinya.me"
+        >
+          About
+      </a>
+      </li>
+    </ul>
+  </nav>
+</header>

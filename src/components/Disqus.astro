@@ -1,0 +1,31 @@
+---
+export interface Props {
+  title: string;
+  slug: string;
+}
+
+const props = Astro.props;
+---
+
+<div id="disqus_thread"></div>
+<script define:vars={{ props }}>
+  var disqus_config = function () {
+    this.page.url = `https://blog.ayitinya.me/articles/${props.slug}`;
+    this.page.identifier = props.title;
+  };
+  (function () {
+    var d = document,
+      s = d.createElement("script");
+
+    s.src = "https://ayitinyas-blog.disqus.com/embed.js";
+
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>
+  Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+    comments powered by Disqus.
+  </a>
+</noscript>

@@ -20,7 +20,7 @@ const entry: CollectionEntry<"blog"> = Astro.props.entry;
 const { Content } = await entry.render();
 ---
 
-<script lang="ts">
+<script>
   const progressIndicator = document.getElementById("progress-indicator");
 
   document.addEventListener("scroll", () => {

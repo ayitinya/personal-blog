@@ -8,11 +8,9 @@ id: 2
 draft: false
 description: 'The GitHub Student Developer Pack is a program that provides students with access to a variety of developer tools and services for free. It is a great way to get started with your career as a developer.'
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from '@astrojs/image/components'
 
 The GitHub Student Developer Pack is a program that provides students with access to a variety of developer tools and services for free. It is a great way to get started with your career as a developer.
-
-::Toc
 
 - [What Are The Benefits Of The GitHub Student Developer Pack?](#what-are-the-benefits-of-the-github-student-developer-pack)
   - [1. Intro Into Web Dev Package](#1-intro-into-web-dev-package)
@@ -21,7 +19,6 @@ The GitHub Student Developer Pack is a program that provides students with acces
   - [4. Other Benefits](#4-other-benefits)
 - [How To Get The GitHub Student Developer Pack](#how-to-get-the-github-student-developer-pack)
 - [Conclusion](#conclusion)
-::
 
 ## What Are The Benefits Of The GitHub Student Developer Pack?
 
@@ -44,8 +41,6 @@ Offers include:
   aspectRatio="{16/9}"
  />
 
-::
-
 ### 2. Aspiring Creatives Package
 
 Working on a creative project? Develop your design and collaboration skills to get your clever intentions off the ground. Unleash your originality and start to tinker with the Aspiring Creatives Experience.
@@ -62,8 +57,6 @@ Offers include:
   height="{400}"
   aspectRatio="{16/9}"
  />
-
-::
 
 ### 3. Virtual Event Kit
 

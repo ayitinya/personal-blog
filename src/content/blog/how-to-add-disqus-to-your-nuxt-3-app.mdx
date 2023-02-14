@@ -8,6 +8,8 @@ id: 4
 draft: false
 ---
 
+import { Image } from "@astrojs/image/components";
+
 ## What is Disqus?
 
 Disqus is a free service that allows you to add comments to your website. It is a great way to engage with your readers and get feedback on your content. It is also a great way to get more traffic to your website.
@@ -20,8 +22,10 @@ To get started, you need to create a Disqus account. You can do this by going to
 
 <Image
   src="https://res.cloudinary.com/dnha19v3n/image/upload/v1672284279/personal-blog/Capture_d_%C3%A9cran_2022-12-29_032148_fhxs5c.png"
-  height={800}
-  width={1000}
+  width="800"
+  height="500"
+  loading="eager"
+  format="webp"
   alt="Disqus website with a form to add a new website"
  />
 

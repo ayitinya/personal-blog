@@ -34,17 +34,17 @@ const { Content } = await entry.render();
   });
 </script>
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} description={entry.data.description}>
   <div
     id="progress-indicator"
-    class="h-1 rounded-r fixed top-0 left-0 right-0 origin-left scale-x-0 bg-black dark:bg-blue-500"
+    class="h-2 rounded-r fixed top-0 left-0 right-0 origin-left scale-x-0 bg-blue-500"
   >
   </div>
   <Image
     src={entry.data.image}
     alt={entry.data.title}
     width={800}
-    height={450}
+    height={500}
     loading="eager"
     format="webp"
     quality={50}

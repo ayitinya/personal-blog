@@ -45,6 +45,9 @@ const { Content } = await entry.render();
     alt={entry.data.title}
     width={800}
     height={450}
+    loading="eager"
+    format="webp"
+    quality={50}
     class="w-full pb-10 max-h-[450px] object-cover object-center"
   />
   <article

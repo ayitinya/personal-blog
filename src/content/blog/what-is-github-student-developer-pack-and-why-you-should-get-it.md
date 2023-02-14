@@ -8,7 +8,6 @@ id: 2
 draft: false
 description: 'The GitHub Student Developer Pack is a program that provides students with access to a variety of developer tools and services for free. It is a great way to get started with your career as a developer.'
 ---
-import { Image } from '@astrojs/image/components'
 
 The GitHub Student Developer Pack is a program that provides students with access to a variety of developer tools and services for free. It is a great way to get started with your career as a developer.
 

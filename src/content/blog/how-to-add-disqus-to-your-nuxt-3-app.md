@@ -7,7 +7,6 @@ alt: Disqus Banner
 id: 4
 draft: false
 ---
-import { Image } from '@astrojs/image/components';
 
 ## What is Disqus?
 

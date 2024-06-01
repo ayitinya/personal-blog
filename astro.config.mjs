@@ -1,6 +1,5 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, squooshImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
@@ -9,12 +8,12 @@ import partytown from "@astrojs/partytown";
 
 export default defineConfig({
   site: "https://blog.ayitinya.me",
+  image: {
+    service: squooshImageService(),
+  },
   integrations: [
     mdx(),
     tailwind(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     sitemap({
       changefreq: "weekly",
       lastmod: new Date(),

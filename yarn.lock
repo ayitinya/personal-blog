@@ -70,12 +70,12 @@
     unist-util-visit "^5.0.0"
     vfile "^6.0.1"
 
-"@astrojs/partytown@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-2.1.0.tgz#a539946dd233af57b5ef478120690d0838202734"
-  integrity sha512-9fjvTx2hTQpirUh1HnZZtFQaBz2R5ixrrmU/Zam3VZ9CoR3frqtnqg/Dt/i5C3UAlwiN0i8VuKxPx5cHP8yY5A==
+"@astrojs/partytown@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-2.1.1.tgz#5c5270ca75eb692f6fe7ef3f80be41163f170eb7"
+  integrity sha512-KvecQuGGgrDrdTjC5awmtoQXqJFinChfeizKBJyr7F5EGQPx62xq8SIWkcXamLr5xZyNw0lryKeLtIzbxRH/zw==
   dependencies:
-    "@builder.io/partytown" "^0.10.1"
+    "@builder.io/partytown" "^0.10.2"
     mrmime "^2.0.0"
 
 "@astrojs/prism@^3.1.0":
@@ -329,7 +329,7 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@builder.io/partytown@^0.10.1":
+"@builder.io/partytown@^0.10.2":
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.10.2.tgz#102c909f805c945a638e249275003ef6ba828287"
   integrity sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==
